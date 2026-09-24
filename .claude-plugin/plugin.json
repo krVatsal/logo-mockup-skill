@@ -1,0 +1,8 @@
+{
+  "name": "mockup",
+  "description": "Turn a logo and company brief into a curated set of polished brand mockups.",
+  "version": "0.1.0",
+  "author": { "name": "Mockup contributors" },
+  "license": "MIT",
+  "keywords": ["branding", "mockup", "logo", "design"]
+}

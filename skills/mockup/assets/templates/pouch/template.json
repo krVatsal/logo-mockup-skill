@@ -1,0 +1,36 @@
+{
+  "id": "pouch",
+  "name": "Product Pouch",
+  "role": "packaging",
+  "priority": 9,
+  "tags": [
+    "food",
+    "beverage",
+    "beauty",
+    "wellness",
+    "consumer",
+    "pets"
+  ],
+  "quad": [
+    [
+      0.35,
+      0.32
+    ],
+    [
+      0.65,
+      0.32
+    ],
+    [
+      0.65,
+      0.7
+    ],
+    [
+      0.35,
+      0.7
+    ]
+  ],
+  "padding": 0.14,
+  "texture_strength": 0.16,
+  "width": 1254,
+  "height": 1254
+}

@@ -1,0 +1,35 @@
+{
+  "id": "coffee-cup",
+  "name": "Cafe Cup",
+  "role": "customer-touchpoint",
+  "priority": 8,
+  "tags": [
+    "coffee",
+    "food",
+    "beverage",
+    "hospitality",
+    "events"
+  ],
+  "quad": [
+    [
+      0.37,
+      0.36
+    ],
+    [
+      0.64,
+      0.36
+    ],
+    [
+      0.61,
+      0.66
+    ],
+    [
+      0.4,
+      0.66
+    ]
+  ],
+  "padding": 0.14,
+  "texture_strength": 0.13,
+  "width": 1254,
+  "height": 1254
+}

@@ -1,0 +1,36 @@
+{
+  "id": "tshirt",
+  "name": "Studio T-shirt",
+  "role": "wearable",
+  "priority": 10,
+  "tags": [
+    "fashion",
+    "lifestyle",
+    "technology",
+    "services",
+    "community",
+    "streetwear"
+  ],
+  "quad": [
+    [
+      0.31,
+      0.29
+    ],
+    [
+      0.69,
+      0.29
+    ],
+    [
+      0.69,
+      0.58
+    ],
+    [
+      0.31,
+      0.58
+    ]
+  ],
+  "padding": 0.12,
+  "texture_strength": 0.22,
+  "width": 1254,
+  "height": 1254
+}

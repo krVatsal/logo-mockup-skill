@@ -1,0 +1,12 @@
+{
+  "name": "mockup",
+  "description": "Create relevant brand mockups from a logo and company details.",
+  "owner": { "name": "Mockup contributors" },
+  "plugins": [
+    {
+      "name": "mockup",
+      "source": "./",
+      "description": "Turn a logo into a curated, presentation-ready mockup set."
+    }
+  ]
+}

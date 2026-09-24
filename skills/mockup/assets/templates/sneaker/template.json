@@ -1,0 +1,35 @@
+{
+  "id": "sneaker",
+  "name": "Minimal Sneaker",
+  "role": "wearable",
+  "priority": 7,
+  "tags": [
+    "fashion",
+    "sports",
+    "fitness",
+    "lifestyle",
+    "streetwear"
+  ],
+  "quad": [
+    [
+      0.3,
+      0.43
+    ],
+    [
+      0.66,
+      0.42
+    ],
+    [
+      0.7,
+      0.57
+    ],
+    [
+      0.34,
+      0.59
+    ]
+  ],
+  "padding": 0.14,
+  "texture_strength": 0.2,
+  "width": 1254,
+  "height": 1254
+}

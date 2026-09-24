@@ -1,0 +1,436 @@
+{
+  "version": 1,
+  "templates": [
+    {
+      "id": "billboard",
+      "name": "Blue-hour Billboard",
+      "role": "environmental",
+      "priority": 10,
+      "tags": [
+        "campaign",
+        "technology",
+        "services",
+        "fashion",
+        "consumer",
+        "entertainment",
+        "retail"
+      ],
+      "quad": [
+        [
+          0.33,
+          0.15
+        ],
+        [
+          0.88,
+          0.07
+        ],
+        [
+          0.89,
+          0.52
+        ],
+        [
+          0.32,
+          0.59
+        ]
+      ],
+      "padding": 0.07,
+      "texture_strength": 0.05,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "business-card",
+      "name": "Textured Business Cards",
+      "role": "stationery",
+      "priority": 9,
+      "tags": [
+        "services",
+        "technology",
+        "consulting",
+        "finance",
+        "luxury",
+        "creative",
+        "wellness"
+      ],
+      "quad": [
+        [
+          0.3,
+          0.48
+        ],
+        [
+          0.74,
+          0.43
+        ],
+        [
+          0.86,
+          0.73
+        ],
+        [
+          0.41,
+          0.79
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.18,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "cap",
+      "name": "Cream Cap",
+      "role": "wearable",
+      "priority": 7,
+      "tags": [
+        "fashion",
+        "sports",
+        "hospitality",
+        "lifestyle"
+      ],
+      "quad": [
+        [
+          0.35,
+          0.32
+        ],
+        [
+          0.65,
+          0.31
+        ],
+        [
+          0.63,
+          0.51
+        ],
+        [
+          0.37,
+          0.52
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.18,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "coffee-cup",
+      "name": "Cafe Cup",
+      "role": "customer-touchpoint",
+      "priority": 8,
+      "tags": [
+        "coffee",
+        "food",
+        "beverage",
+        "hospitality",
+        "events"
+      ],
+      "quad": [
+        [
+          0.37,
+          0.36
+        ],
+        [
+          0.64,
+          0.36
+        ],
+        [
+          0.61,
+          0.66
+        ],
+        [
+          0.4,
+          0.66
+        ]
+      ],
+      "padding": 0.14,
+      "texture_strength": 0.13,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "hoodie",
+      "name": "Charcoal Hoodie",
+      "role": "wearable",
+      "priority": 8,
+      "tags": [
+        "fashion",
+        "lifestyle",
+        "technology",
+        "gaming",
+        "streetwear"
+      ],
+      "quad": [
+        [
+          0.34,
+          0.34
+        ],
+        [
+          0.66,
+          0.34
+        ],
+        [
+          0.66,
+          0.57
+        ],
+        [
+          0.34,
+          0.57
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.2,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "pouch",
+      "name": "Product Pouch",
+      "role": "packaging",
+      "priority": 9,
+      "tags": [
+        "food",
+        "beverage",
+        "beauty",
+        "wellness",
+        "consumer",
+        "pets"
+      ],
+      "quad": [
+        [
+          0.35,
+          0.32
+        ],
+        [
+          0.65,
+          0.32
+        ],
+        [
+          0.65,
+          0.7
+        ],
+        [
+          0.35,
+          0.7
+        ]
+      ],
+      "padding": 0.14,
+      "texture_strength": 0.16,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "shipping-box",
+      "name": "Kraft Shipping Box",
+      "role": "packaging",
+      "priority": 8,
+      "tags": [
+        "consumer",
+        "ecommerce",
+        "food",
+        "sustainable",
+        "technology",
+        "retail"
+      ],
+      "quad": [
+        [
+          0.25,
+          0.34
+        ],
+        [
+          0.7,
+          0.25
+        ],
+        [
+          0.8,
+          0.5
+        ],
+        [
+          0.35,
+          0.59
+        ]
+      ],
+      "padding": 0.14,
+      "texture_strength": 0.2,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "shopping-bag",
+      "name": "Retail Shopping Bag",
+      "role": "carry",
+      "priority": 8,
+      "tags": [
+        "retail",
+        "fashion",
+        "luxury",
+        "beauty",
+        "food",
+        "consumer"
+      ],
+      "quad": [
+        [
+          0.28,
+          0.34
+        ],
+        [
+          0.7,
+          0.34
+        ],
+        [
+          0.7,
+          0.71
+        ],
+        [
+          0.28,
+          0.71
+        ]
+      ],
+      "padding": 0.14,
+      "texture_strength": 0.12,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "sneaker",
+      "name": "Minimal Sneaker",
+      "role": "wearable",
+      "priority": 7,
+      "tags": [
+        "fashion",
+        "sports",
+        "fitness",
+        "lifestyle",
+        "streetwear"
+      ],
+      "quad": [
+        [
+          0.3,
+          0.43
+        ],
+        [
+          0.66,
+          0.42
+        ],
+        [
+          0.7,
+          0.57
+        ],
+        [
+          0.34,
+          0.59
+        ]
+      ],
+      "padding": 0.14,
+      "texture_strength": 0.2,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "storefront",
+      "name": "City Storefront",
+      "role": "environmental",
+      "priority": 9,
+      "tags": [
+        "retail",
+        "fashion",
+        "food",
+        "beverage",
+        "beauty",
+        "services",
+        "hospitality"
+      ],
+      "quad": [
+        [
+          0.18,
+          0.15
+        ],
+        [
+          0.81,
+          0.15
+        ],
+        [
+          0.81,
+          0.31
+        ],
+        [
+          0.18,
+          0.31
+        ]
+      ],
+      "padding": 0.08,
+      "texture_strength": 0.08,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tote",
+      "name": "Canvas Tote",
+      "role": "carry",
+      "priority": 9,
+      "tags": [
+        "retail",
+        "fashion",
+        "sustainable",
+        "arts",
+        "food",
+        "technology",
+        "services"
+      ],
+      "quad": [
+        [
+          0.29,
+          0.39
+        ],
+        [
+          0.71,
+          0.39
+        ],
+        [
+          0.7,
+          0.73
+        ],
+        [
+          0.3,
+          0.73
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.25,
+      "width": 1254,
+      "height": 1254
+    },
+    {
+      "id": "tshirt",
+      "name": "Studio T-shirt",
+      "role": "wearable",
+      "priority": 10,
+      "tags": [
+        "fashion",
+        "lifestyle",
+        "technology",
+        "services",
+        "community",
+        "streetwear"
+      ],
+      "quad": [
+        [
+          0.31,
+          0.29
+        ],
+        [
+          0.69,
+          0.29
+        ],
+        [
+          0.69,
+          0.58
+        ],
+        [
+          0.31,
+          0.58
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.22,
+      "width": 1254,
+      "height": 1254
+    }
+  ]
+}

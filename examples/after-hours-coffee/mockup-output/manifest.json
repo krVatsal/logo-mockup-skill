@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "brand": "After Hours Coffee",
+  "brief": "Late-night neighborhood coffee bar and small-batch roaster for students and musicians",
+  "style": null,
+  "logo": {
+    "source": "C:\\brag-mockups\\examples\\after-hours-coffee\\logo.svg",
+    "sha256": "8e9a9890346c04297b67839f1d944d6a022093932f53ac1355b526e3272152bd",
+    "format": "svg"
+  },
+  "contact_sheet_format": "square",
+  "render_mode": "deterministic",
+  "generated_at": "2026-09-24T15:04:13.343182+05:30",
+  "outputs": [
+    {
+      "template": "coffee-cup",
+      "name": "Cafe Cup",
+      "role": "customer-touchpoint",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/01-coffee-cup.png",
+      "reason": "Matches the brand's coffee context and adds a customer-touchpoint application."
+    },
+    {
+      "template": "billboard",
+      "name": "Blue-hour Billboard",
+      "role": "environmental",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "path": "images/02-billboard.png",
+      "reason": "Adds a strong environmental application to keep the set varied."
+    },
+    {
+      "template": "tshirt",
+      "name": "Studio T-shirt",
+      "role": "wearable",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/03-tshirt.png",
+      "reason": "Adds a strong wearable application to keep the set varied."
+    },
+    {
+      "template": "business-card",
+      "name": "Textured Business Cards",
+      "role": "stationery",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/04-business-card.png",
+      "reason": "Adds a strong stationery application to keep the set varied."
+    },
+    {
+      "template": "pouch",
+      "name": "Product Pouch",
+      "role": "packaging",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/05-pouch.png",
+      "reason": "Adds a strong packaging application to keep the set varied."
+    },
+    {
+      "template": "tote",
+      "name": "Canvas Tote",
+      "role": "carry",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/06-tote.png",
+      "reason": "Adds a strong carry application to keep the set varied."
+    }
+  ],
+  "generative_outputs": []
+}

@@ -1,0 +1,7 @@
+interface:
+  display_name: "Brand Mockups"
+  short_description: "Create a curated mockup set from a logo"
+  brand_color: "#EE5A36"
+  default_prompt: "Use $mockup to turn my logo and company brief into a curated brand mockup set."
+policy:
+  allow_implicit_invocation: true

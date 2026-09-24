@@ -1,0 +1,37 @@
+{
+  "id": "storefront",
+  "name": "City Storefront",
+  "role": "environmental",
+  "priority": 9,
+  "tags": [
+    "retail",
+    "fashion",
+    "food",
+    "beverage",
+    "beauty",
+    "services",
+    "hospitality"
+  ],
+  "quad": [
+    [
+      0.18,
+      0.15
+    ],
+    [
+      0.81,
+      0.15
+    ],
+    [
+      0.81,
+      0.31
+    ],
+    [
+      0.18,
+      0.31
+    ]
+  ],
+  "padding": 0.08,
+  "texture_strength": 0.08,
+  "width": 1536,
+  "height": 1024
+}

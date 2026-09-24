@@ -1,0 +1,36 @@
+{
+  "id": "shopping-bag",
+  "name": "Retail Shopping Bag",
+  "role": "carry",
+  "priority": 8,
+  "tags": [
+    "retail",
+    "fashion",
+    "luxury",
+    "beauty",
+    "food",
+    "consumer"
+  ],
+  "quad": [
+    [
+      0.28,
+      0.34
+    ],
+    [
+      0.7,
+      0.34
+    ],
+    [
+      0.7,
+      0.71
+    ],
+    [
+      0.28,
+      0.71
+    ]
+  ],
+  "padding": 0.14,
+  "texture_strength": 0.12,
+  "width": 1254,
+  "height": 1254
+}

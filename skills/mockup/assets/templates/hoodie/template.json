@@ -1,0 +1,35 @@
+{
+  "id": "hoodie",
+  "name": "Charcoal Hoodie",
+  "role": "wearable",
+  "priority": 8,
+  "tags": [
+    "fashion",
+    "lifestyle",
+    "technology",
+    "gaming",
+    "streetwear"
+  ],
+  "quad": [
+    [
+      0.34,
+      0.34
+    ],
+    [
+      0.66,
+      0.34
+    ],
+    [
+      0.66,
+      0.57
+    ],
+    [
+      0.34,
+      0.57
+    ]
+  ],
+  "padding": 0.12,
+  "texture_strength": 0.2,
+  "width": 1254,
+  "height": 1254
+}
