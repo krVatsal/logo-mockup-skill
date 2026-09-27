@@ -6,7 +6,7 @@ Turn a logo and a short company brief into a curated set of presentation-ready b
 
 ## Use
 
-    /mockup --logo ./logo.svg --brand "Northstar" --brief "Sustainable trail-running equipment"
+    /mockup --logo ./logo.png --brand "Fabs" --brief "European merchandise and lifestyle brand"
 
 Natural language works too:
 
@@ -14,19 +14,19 @@ Natural language works too:
 
 The deterministic renderer can also run directly:
 
-    uv run --project skills/mockup/scripts python skills/mockup/scripts/render_mockups.py --logo ./logo.png --brand "Northstar" --brief "Sustainable trail-running equipment" --count 6
+    uv run --project skills/mockup/scripts python skills/mockup/scripts/render_mockups.py --logo ./logo.png --brand "Fabs" --brief "European merchandise and lifestyle brand" --count 6
 
 Transparent PNG and SVG logos are supported. SVG rendering uses a self-contained resvg wheel and does not require system graphics libraries.
 
 ## Examples
 
-Three fictional brand examples are included with complete rendered outputs:
+Three complete, production-oriented examples are included:
 
-- Northstar Trail - outdoor and trail-running equipment
-- Verdant Pantry - sustainable food and consumer packaging
-- After Hours Coffee - hospitality and neighborhood retail
+- AI Application - dimensional technology identity across fabric, offices, facades, reception, and glass
+- Razor Eater - Indo-Chinese fast-moving food packaging, storefront, campaign, and staff apparel
+- Fabs - European clothing and merchandise across apparel, accessories, retail bags, and campaign media
 
-Each example contains its CC0 source mark, company brief, six mockups, contact sheet, analysis, and manifest.
+Each example contains the supplied source mark, company brief, six mockups, contact sheet, analysis, and manifest.
 
 ## Install
 
@@ -43,4 +43,4 @@ The Claude plugin metadata is available under `.claude-plugin/`.
 - `tests/` - selection, validation, and example completeness tests
 - `.claude-plugin/` - Claude plugin and marketplace metadata
 
-All bundled base photographs were generated specifically for this repository. The downloaded example marks are CC0 and documented in `examples/SOURCES.md`.
+All bundled base photographs were generated specifically for this repository. Example artwork provenance is documented in `examples/SOURCES.md`.

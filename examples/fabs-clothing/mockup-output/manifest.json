@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "brand": "Fabs",
+  "brief": "European merchandise and lifestyle brand creating contemporary, design-led apparel and accessories for a fashion-conscious urban audience. Premium, minimal, relaxed, and culturally current.",
+  "style": null,
+  "logo": {
+    "source": "../logo.png",
+    "sha256": "bbbd6eb2295693abc7fad544595c0a2fc2fd8023f0910b51f0c9101e30c74d33",
+    "format": "png"
+  },
+  "contact_sheet_format": "landscape",
+  "render_mode": "deterministic",
+  "generated_at": "2026-09-27T12:51:41.134360+05:30",
+  "outputs": [
+    {
+      "template": "tshirt",
+      "name": "Studio T-shirt",
+      "role": "wearable",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/01-tshirt.png",
+      "reason": "Matches the brand's lifestyle context and adds a wearable application."
+    },
+    {
+      "template": "hoodie",
+      "name": "Charcoal Hoodie",
+      "role": "wearable",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/02-hoodie.png",
+      "reason": "Matches the brand's lifestyle context and adds a wearable application."
+    },
+    {
+      "template": "cap",
+      "name": "Cream Cap",
+      "role": "wearable",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/03-cap.png",
+      "reason": "Matches the brand's lifestyle context and adds a wearable application."
+    },
+    {
+      "template": "tote",
+      "name": "Canvas Tote",
+      "role": "carry",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/04-tote.png",
+      "reason": "Adds a strong carry application to keep the set varied."
+    },
+    {
+      "template": "shopping-bag",
+      "name": "Retail Shopping Bag",
+      "role": "carry",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "path": "images/05-shopping-bag.png",
+      "reason": "Adds a strong carry application to keep the set varied."
+    },
+    {
+      "template": "billboard",
+      "name": "Blue-hour Billboard",
+      "role": "environmental",
+      "mode": "deterministic",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "path": "images/06-billboard.png",
+      "reason": "Adds a strong environmental application to keep the set varied."
+    }
+  ],
+  "generative_outputs": []
+}

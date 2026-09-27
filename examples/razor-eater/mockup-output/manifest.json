@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "brand": "Razor Eater",
+  "logo": "../logo.png",
+  "render_mode": "mixed",
+  "outputs": [
+    {
+      "name": "Noodle Takeout Carton",
+      "path": "images/01-carton.png",
+      "dimensions": [
+        2048,
+        1872
+      ],
+      "mode": "generative-background + deterministic-composite"
+    },
+    {
+      "name": "Takeaway Paper Bag",
+      "path": "images/02-bag.png",
+      "dimensions": [
+        2048,
+        1872
+      ],
+      "mode": "generative-background + deterministic-composite"
+    },
+    {
+      "name": "Sauce & Seasoning Pouch",
+      "path": "images/03-sauce-pouch.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "deterministic"
+    },
+    {
+      "name": "Indo-Chinese QSR Storefront",
+      "path": "images/04-qsr-storefront.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative-background + deterministic-composite"
+    },
+    {
+      "name": "Campaign Billboard",
+      "path": "images/05-billboard.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "deterministic"
+    },
+    {
+      "name": "Staff T-shirt",
+      "path": "images/06-staff-tshirt.png",
+      "dimensions": [
+        2048,
+        2048
+      ],
+      "mode": "deterministic"
+    }
+  ],
+  "generative_prompts": [
+    "Blank pale-blush Indo-Chinese noodle takeaway carton in a contemporary QSR counter environment.",
+    "Blank pale-blush fast-food takeaway paper bag in a contemporary Indo-Chinese restaurant environment.",
+    "Blank pale-blush fascia on a contemporary Indo-Chinese QSR storefront at dusk."
+  ],
+  "identity_invariant": "The supplied Razor Eater wordmark was composited deterministically after scene generation and was not redrawn by the image model."
+}

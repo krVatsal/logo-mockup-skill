@@ -21,7 +21,7 @@ SPEC.loader.exec_module(renderer)
 class RendererTests(unittest.TestCase):
     def test_catalog_and_diverse_selection(self):
         items = renderer.templates()
-        self.assertEqual(len(items), 12)
+        self.assertEqual(len(items), 18)
         selected = renderer.select(items, "sustainable trail running outdoor fashion equipment", "", 6, "")
         self.assertEqual(len(selected), 6)
         self.assertGreaterEqual(len({item["role"] for item in selected}), 4)
@@ -65,7 +65,7 @@ class RendererTests(unittest.TestCase):
         self.assertEqual(cap["logo_backing"], "woven-patch")
 
     def test_checked_in_examples_are_complete(self):
-        for name in ("northstar-trail", "verdant-pantry", "after-hours-coffee"):
+        for name in ("ai-application", "razor-eater", "fabs-clothing"):
             output = ROOT / "examples" / name / "mockup-output"
             manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
             self.assertEqual(len(manifest["outputs"]), 6)

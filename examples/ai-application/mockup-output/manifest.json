@@ -1,0 +1,71 @@
+{
+  "version": 2,
+  "brand": "AI application",
+  "logo": "../logo.png",
+  "transparent_mark": "../logo.png",
+  "outputs": [
+    {
+      "name": "Technical Fabric Badge",
+      "path": "images/01-technical-fabric-badge.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    },
+    {
+      "name": "Dimensional Office Sign",
+      "path": "images/02-dimensional-office-sign.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    },
+    {
+      "name": "Headquarters Facade",
+      "path": "images/03-headquarters-facade.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    },
+    {
+      "name": "Concrete Campus Facade",
+      "path": "images/04-concrete-facade.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    },
+    {
+      "name": "Illuminated Reception Sign",
+      "path": "images/05-illuminated-reception.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    },
+    {
+      "name": "Frosted Glass Identity",
+      "path": "images/06-frosted-glass-mark.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic dimensional composite"
+    }
+  ],
+  "generative_prompts": [
+    "Blank lime woven badge on cobalt technical fabric, macro editorial product photography.",
+    "Blank charcoal executive meeting-room wall with premium architectural lighting.",
+    "Blank black ribbed technology headquarters facade with lime trim.",
+    "Blank warm-white concrete technology campus facade in crisp daylight.",
+    "Blank dark-slate AI company reception wall with subtle lime light line.",
+    "Blank smoked-glass AI research studio partition with cobalt practical lighting."
+  ],
+  "identity_invariant": "The supplied six-arm symbol geometry was extracted and composited deterministically after blank scene generation; only material colorways were adapted."
+}

@@ -1,13 +1,9 @@
-# Example logo sources
+# Example artwork sources
 
-The example marks were selected after reviewing public mockup libraries and open-asset catalogs. Commercial mockup-template downloads were not bundled because their licenses generally forbid redistribution of the blank source files.
+The three example marks were supplied by the repository owner for demonstrating the mockup skill:
 
-These three marks come from the Pinhead icon library (https://github.com/waysidemapping/pinhead), downloaded from its official GitHub repository on 2026-09-24:
+- `ai-application/logo.png` - six-arm AI application symbol
+- `razor-eater/logo.png` - Razor Eater Indo-Chinese food wordmark
+- `fabs-clothing/logo.png` - Fabs European clothing and merchandise wordmark
 
-- northstar-trail/logo.svg - snowcapped_mountain.svg
-- verdant-pantry/logo.svg - leaf.svg
-- after-hours-coffee/logo.svg - coffee_mug_with_steam.svg
-
-Pinhead is dedicated to the public domain under CC0 1.0. The complete license text is included as LICENSE-CC0.txt.
-
-The company names and briefs in these examples are fictional and created for this repository.
+The examples retain the supplied geometry. Generative tools were used only for blank product or environmental scenes where recorded in each example's manifest.
