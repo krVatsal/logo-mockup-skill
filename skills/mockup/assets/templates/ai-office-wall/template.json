@@ -1,0 +1,44 @@
+{
+  "id": "ai-office-wall",
+  "name": "Dimensional Office Sign",
+  "role": "environmental",
+  "priority": 14,
+  "tags": [
+    "technology",
+    "ai",
+    "software",
+    "corporate",
+    "services",
+    "office"
+  ],
+  "quad": [
+    [
+      0.42,
+      0.14
+    ],
+    [
+      0.594,
+      0.14
+    ],
+    [
+      0.594,
+      0.402
+    ],
+    [
+      0.42,
+      0.402
+    ]
+  ],
+  "padding": 0.05,
+  "texture_strength": 0.05,
+  "material_effect": "raised-sign",
+  "material_depth": 10,
+  "material_glow": true,
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Blank charcoal executive meeting-room wall with premium architectural lighting."
+  },
+  "width": 1536,
+  "height": 1024
+}

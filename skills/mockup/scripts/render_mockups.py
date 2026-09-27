@@ -14,7 +14,7 @@ from pathlib import Path
 
 import cv2
 import numpy as np
-from PIL import Image, ImageDraw, ImageFont, ImageOps
+from PIL import Image, ImageDraw, ImageFilter, ImageFont, ImageOps
 
 SKILL_DIR = Path(__file__).resolve().parents[1]
 TEMPLATES_DIR = SKILL_DIR / "assets" / "templates"
@@ -287,6 +287,68 @@ def displace_artwork(warped: np.ndarray, shade: np.ndarray, mask: np.ndarray, st
     return cv2.remap(warped, map_x, map_y, cv2.INTER_CUBIC, borderMode=cv2.BORDER_CONSTANT)
 
 
+def shifted(layer: Image.Image, dx: int, dy: int) -> Image.Image:
+    moved = Image.new("RGBA", layer.size)
+    moved.alpha_composite(layer, (dx, dy))
+    return moved
+
+
+def composite_material(base: np.ndarray, warped: np.ndarray, item: dict) -> Image.Image:
+    """Composite artwork as a photographed material instead of a flat decal."""
+    effect = item.get("material_effect", "")
+    background = Image.fromarray(base, "RGBA")
+    face = Image.fromarray(warped.astype(np.uint8), "RGBA")
+    if not effect:
+        return Image.alpha_composite(background, face)
+
+    alpha = face.getchannel("A")
+    if effect == "raised-sign":
+        depth = max(2, int(item.get("material_depth", 9)))
+        shadow_alpha = alpha.filter(ImageFilter.GaussianBlur(max(4, depth * 0.9)))
+        shadow_alpha = shadow_alpha.point(lambda value: round(value * 0.42))
+        shadow = Image.new("RGBA", face.size, (0, 0, 0, 0))
+        shadow.putalpha(shadow_alpha)
+        background.alpha_composite(shifted(shadow, depth + 4, depth + 5))
+
+        side_np = np.asarray(face).copy()
+        side_np[:, :, :3] = (side_np[:, :, :3].astype(np.float32) * 0.34).astype(np.uint8)
+        side = Image.fromarray(side_np, "RGBA")
+        for offset in range(depth, 0, -1):
+            background.alpha_composite(shifted(side, offset, offset))
+
+        if item.get("material_glow"):
+            glow_alpha = alpha.filter(ImageFilter.GaussianBlur(max(12, depth * 2.2)))
+            glow_alpha = glow_alpha.point(lambda value: round(value * 0.30))
+            glow = face.copy()
+            glow.putalpha(glow_alpha)
+            background.alpha_composite(glow)
+        background.alpha_composite(face)
+
+        eroded = cv2.erode(np.asarray(alpha), np.ones((5, 5), np.uint8), iterations=1)
+        rim_alpha = np.clip(np.asarray(alpha).astype(np.int16) - eroded.astype(np.int16), 0, 255).astype(np.uint8)
+        rim = Image.new("RGBA", face.size, (255, 255, 255, 0))
+        rim.putalpha(Image.fromarray((rim_alpha.astype(np.float32) * 0.22).astype(np.uint8)))
+        background.alpha_composite(shifted(rim, -1, -1))
+        return background
+
+    if effect == "glass-vinyl":
+        translucent = face.copy()
+        translucent.putalpha(alpha.point(lambda value: round(value * 0.76)))
+        background.alpha_composite(translucent)
+        highlight = face.copy()
+        highlight.putalpha(alpha.filter(ImageFilter.GaussianBlur(0.7)).point(lambda value: round(value * 0.18)))
+        background.alpha_composite(shifted(highlight, -2, -2))
+        return background
+
+    if effect == "fabric-ink":
+        printed = face.filter(ImageFilter.GaussianBlur(0.28))
+        printed.putalpha(alpha.point(lambda value: round(value * 0.92)))
+        background.alpha_composite(printed)
+        return background
+
+    raise ValueError(f"Unknown material_effect: {effect}")
+
+
 def render(item: dict, logo: Image.Image, destination: Path) -> tuple[int, int]:
     folder = item["_dir"]
     base = Image.open(folder / "base.png").convert("RGBA")
@@ -324,7 +386,7 @@ def render(item: dict, logo: Image.Image, destination: Path) -> tuple[int, int]:
         local_rgb = np.median(local, axis=0) if local.size else np.array([127, 127, 127])
         if contrast_ratio(logo_rgb, local_rgb) < float(item.get("minimum_contrast", 3.0)):
             base_np = tint_surface(base_np, surface_mask, contrasting_surface(logo_rgb))
-    result = Image.alpha_composite(Image.fromarray(base_np, "RGBA"), Image.fromarray(warped.astype(np.uint8), "RGBA")).convert("RGB")
+    result = composite_material(base_np, warped, item).convert("RGB")
     if max(result.size) < 2048:
         scale = 2048 / max(result.size)
         result = result.resize(

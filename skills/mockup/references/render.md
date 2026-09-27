@@ -32,4 +32,8 @@ Each folder under `assets/templates/` contains `base.png`, `preview.jpg`, `mask.
 
 Template coordinates are normalized `[x, y]` points in clockwise order: top-left, top-right, bottom-right, bottom-left. Masks are grayscale and match the base dimensions. Shading is a neutral grayscale texture layer; it modulates the placed artwork but does not replace its color.
 
+Templates may declare `material_effect` as `raised-sign`, `fabric-ink`, or `glass-vinyl`. These effects preserve the supplied logo face while adding substrate-appropriate depth, texture, opacity, reflections, and shadows. Raised signs may also set `material_depth` and `material_glow`.
+
+Generated reusable blanks include a `source` object with `kind: ai-generated-blank`, the generator, and the exact prompt. Never use a branded final composite as `base.png`.
+
 Run `prepare_templates.py` after adding or changing template metadata. Run `validate_templates.py` before publishing.

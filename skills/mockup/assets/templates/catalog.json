@@ -2,6 +2,50 @@
   "version": 1,
   "templates": [
     {
+      "id": "ai-office-wall",
+      "name": "Dimensional Office Sign",
+      "role": "environmental",
+      "priority": 14,
+      "tags": [
+        "technology",
+        "ai",
+        "software",
+        "corporate",
+        "services",
+        "office"
+      ],
+      "quad": [
+        [
+          0.42,
+          0.14
+        ],
+        [
+          0.594,
+          0.14
+        ],
+        [
+          0.594,
+          0.402
+        ],
+        [
+          0.42,
+          0.402
+        ]
+      ],
+      "padding": 0.05,
+      "texture_strength": 0.05,
+      "material_effect": "raised-sign",
+      "material_depth": 10,
+      "material_glow": true,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank charcoal executive meeting-room wall with premium architectural lighting."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
       "id": "billboard",
       "name": "Blue-hour Billboard",
       "role": "environmental",
@@ -409,6 +453,220 @@
       ],
       "padding": 0.08,
       "texture_strength": 0.08,
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tech-concrete-facade",
+      "name": "Concrete Campus Facade",
+      "role": "environmental",
+      "priority": 13,
+      "tags": [
+        "technology",
+        "ai",
+        "software",
+        "corporate",
+        "services",
+        "campus"
+      ],
+      "quad": [
+        [
+          0.49,
+          0.255
+        ],
+        [
+          0.69,
+          0.225
+        ],
+        [
+          0.69,
+          0.525
+        ],
+        [
+          0.49,
+          0.555
+        ]
+      ],
+      "padding": 0.05,
+      "texture_strength": 0.07,
+      "material_effect": "raised-sign",
+      "material_depth": 11,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank warm-white concrete technology campus facade in crisp daylight."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tech-fabric-badge",
+      "name": "Technical Fabric Badge",
+      "role": "wearable",
+      "priority": 13,
+      "tags": [
+        "technology",
+        "ai",
+        "hardware",
+        "sportswear",
+        "innovation",
+        "corporate"
+      ],
+      "quad": [
+        [
+          0.515,
+          0.252
+        ],
+        [
+          0.796,
+          0.285
+        ],
+        [
+          0.765,
+          0.614
+        ],
+        [
+          0.48,
+          0.568
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.22,
+      "material_effect": "fabric-ink",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank lime woven badge on cobalt technical fabric, macro editorial product photography."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tech-glass-partition",
+      "name": "Frosted Glass Identity",
+      "role": "environmental",
+      "priority": 12,
+      "tags": [
+        "technology",
+        "ai",
+        "research",
+        "corporate",
+        "services",
+        "office"
+      ],
+      "quad": [
+        [
+          0.425,
+          0.295
+        ],
+        [
+          0.602,
+          0.295
+        ],
+        [
+          0.602,
+          0.56
+        ],
+        [
+          0.425,
+          0.56
+        ]
+      ],
+      "padding": 0.05,
+      "texture_strength": 0.04,
+      "material_effect": "glass-vinyl",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank smoked-glass AI research studio partition with cobalt practical lighting."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tech-reception-wall",
+      "name": "Illuminated Reception Sign",
+      "role": "environmental",
+      "priority": 14,
+      "tags": [
+        "technology",
+        "ai",
+        "software",
+        "corporate",
+        "services",
+        "reception"
+      ],
+      "quad": [
+        [
+          0.445,
+          0.175
+        ],
+        [
+          0.62,
+          0.175
+        ],
+        [
+          0.62,
+          0.438
+        ],
+        [
+          0.445,
+          0.438
+        ]
+      ],
+      "padding": 0.05,
+      "texture_strength": 0.05,
+      "material_effect": "raised-sign",
+      "material_depth": 9,
+      "material_glow": true,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank dark-slate AI company reception wall with subtle architectural lighting."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "tech-ribbed-facade",
+      "name": "Ribbed Headquarters Facade",
+      "role": "environmental",
+      "priority": 13,
+      "tags": [
+        "technology",
+        "ai",
+        "hardware",
+        "corporate",
+        "services",
+        "headquarters"
+      ],
+      "quad": [
+        [
+          0.525,
+          0.245
+        ],
+        [
+          0.73,
+          0.22
+        ],
+        [
+          0.73,
+          0.535
+        ],
+        [
+          0.525,
+          0.56
+        ]
+      ],
+      "padding": 0.05,
+      "texture_strength": 0.08,
+      "material_effect": "raised-sign",
+      "material_depth": 12,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Blank black ribbed technology headquarters facade with restrained lime trim."
+      },
       "width": 1536,
       "height": 1024
     },

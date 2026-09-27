@@ -1,0 +1,44 @@
+{
+  "id": "tech-reception-wall",
+  "name": "Illuminated Reception Sign",
+  "role": "environmental",
+  "priority": 14,
+  "tags": [
+    "technology",
+    "ai",
+    "software",
+    "corporate",
+    "services",
+    "reception"
+  ],
+  "quad": [
+    [
+      0.445,
+      0.175
+    ],
+    [
+      0.62,
+      0.175
+    ],
+    [
+      0.62,
+      0.438
+    ],
+    [
+      0.445,
+      0.438
+    ]
+  ],
+  "padding": 0.05,
+  "texture_strength": 0.05,
+  "material_effect": "raised-sign",
+  "material_depth": 9,
+  "material_glow": true,
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Blank dark-slate AI company reception wall with subtle architectural lighting."
+  },
+  "width": 1536,
+  "height": 1024
+}

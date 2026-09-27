@@ -1,0 +1,42 @@
+{
+  "id": "tech-fabric-badge",
+  "name": "Technical Fabric Badge",
+  "role": "wearable",
+  "priority": 13,
+  "tags": [
+    "technology",
+    "ai",
+    "hardware",
+    "sportswear",
+    "innovation",
+    "corporate"
+  ],
+  "quad": [
+    [
+      0.515,
+      0.252
+    ],
+    [
+      0.796,
+      0.285
+    ],
+    [
+      0.765,
+      0.614
+    ],
+    [
+      0.48,
+      0.568
+    ]
+  ],
+  "padding": 0.12,
+  "texture_strength": 0.22,
+  "material_effect": "fabric-ink",
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Blank lime woven badge on cobalt technical fabric, macro editorial product photography."
+  },
+  "width": 1536,
+  "height": 1024
+}

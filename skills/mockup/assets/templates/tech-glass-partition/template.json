@@ -1,0 +1,42 @@
+{
+  "id": "tech-glass-partition",
+  "name": "Frosted Glass Identity",
+  "role": "environmental",
+  "priority": 12,
+  "tags": [
+    "technology",
+    "ai",
+    "research",
+    "corporate",
+    "services",
+    "office"
+  ],
+  "quad": [
+    [
+      0.425,
+      0.295
+    ],
+    [
+      0.602,
+      0.295
+    ],
+    [
+      0.602,
+      0.56
+    ],
+    [
+      0.425,
+      0.56
+    ]
+  ],
+  "padding": 0.05,
+  "texture_strength": 0.04,
+  "material_effect": "glass-vinyl",
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Blank smoked-glass AI research studio partition with cobalt practical lighting."
+  },
+  "width": 1536,
+  "height": 1024
+}

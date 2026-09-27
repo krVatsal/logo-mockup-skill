@@ -11,6 +11,7 @@ from PIL import Image
 
 ROOT = Path(__file__).resolve().parents[1] / "assets" / "templates"
 REQUIRED = ("base.png", "preview.jpg", "mask.png", "shading.png", "template.json")
+MATERIAL_EFFECTS = {"raised-sign", "fabric-ink", "glass-vinyl"}
 
 
 def main() -> int:
@@ -34,6 +35,13 @@ def main() -> int:
                 errors.append(f"{folder.name}: quad must contain four [x,y] points")
             if any(not 0 <= value <= 1 for point in quad for value in point):
                 errors.append(f"{folder.name}: quad coordinates must be normalized")
+            effect = meta.get("material_effect")
+            if effect and effect not in MATERIAL_EFFECTS:
+                errors.append(f"{folder.name}: unknown material_effect {effect}")
+            source = meta.get("source", {})
+            if source.get("kind") == "ai-generated-blank":
+                if not source.get("generator") or not source.get("prompt"):
+                    errors.append(f"{folder.name}: generated blank must record generator and prompt")
             base_size = Image.open(folder / "base.png").size
             for resource in ("mask.png", "shading.png"):
                 if Image.open(folder / resource).size != base_size:
