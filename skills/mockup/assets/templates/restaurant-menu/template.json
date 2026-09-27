@@ -1,0 +1,44 @@
+{
+  "id": "restaurant-menu",
+  "name": "Hardbound Restaurant Menu",
+  "role": "customer-touchpoint",
+  "priority": 14,
+  "tags": [
+    "restaurant",
+    "bar",
+    "grill",
+    "hospitality",
+    "food",
+    "beverage",
+    "premium",
+    "menu"
+  ],
+  "quad": [
+    [
+      0.328,
+      0.086
+    ],
+    [
+      0.758,
+      0.153
+    ],
+    [
+      0.668,
+      0.906
+    ],
+    [
+      0.174,
+      0.753
+    ]
+  ],
+  "padding": 0.18,
+  "texture_strength": 0.18,
+  "material_effect": "fabric-ink",
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Photorealistic premium warm-ivory hardbound restaurant menu on a dark walnut dining table with cream linen, dark cutlery and an amber drink, three-quarter top-down editorial framing, menu cover fully blank and unobstructed, no logo, letters, text, symbols, watermark, or decorative mark."
+  },
+  "width": 1536,
+  "height": 1024
+}

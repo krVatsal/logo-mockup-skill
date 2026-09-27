@@ -1,0 +1,44 @@
+{
+  "id": "pint-glass",
+  "name": "Amber Pint Glass",
+  "role": "customer-touchpoint",
+  "priority": 14,
+  "tags": [
+    "restaurant",
+    "bar",
+    "grill",
+    "hospitality",
+    "beverage",
+    "beer",
+    "pub",
+    "glassware"
+  ],
+  "quad": [
+    [
+      0.414,
+      0.302
+    ],
+    [
+      0.604,
+      0.302
+    ],
+    [
+      0.584,
+      0.665
+    ],
+    [
+      0.432,
+      0.665
+    ]
+  ],
+  "padding": 0.12,
+  "texture_strength": 0.1,
+  "material_effect": "glass-vinyl",
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Photorealistic hero photograph of a blank chilled clear pint glass filled with amber lager on a polished walnut bar in an upscale bar-and-grill, warm brass lighting, front glass surface clean and unobstructed, no logo, letters, text, symbols, embossing, watermark, or decoration."
+  },
+  "width": 1536,
+  "height": 1024
+}

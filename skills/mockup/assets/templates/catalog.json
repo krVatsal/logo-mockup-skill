@@ -243,6 +243,94 @@
       "height": 1254
     },
     {
+      "id": "leather-coaster",
+      "name": "Leather Drinks Coaster",
+      "role": "customer-touchpoint",
+      "priority": 12,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "beverage",
+        "cocktail",
+        "pub",
+        "coaster"
+      ],
+      "quad": [
+        [
+          0.251,
+          0.486
+        ],
+        [
+          0.65,
+          0.394
+        ],
+        [
+          0.767,
+          0.697
+        ],
+        [
+          0.321,
+          0.813
+        ]
+      ],
+      "padding": 0.27,
+      "texture_strength": 0.18,
+      "material_effect": "fabric-ink",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic close-up of a blank warm-ivory square leather drinks coaster beneath a short tumbler on a dark walnut bar, upscale hospitality lighting, visible leather grain and stitching, coaster face largely unobstructed, no logo, letters, text, symbols, watermark, or decorative mark."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "pint-glass",
+      "name": "Amber Pint Glass",
+      "role": "customer-touchpoint",
+      "priority": 14,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "beverage",
+        "beer",
+        "pub",
+        "glassware"
+      ],
+      "quad": [
+        [
+          0.414,
+          0.302
+        ],
+        [
+          0.604,
+          0.302
+        ],
+        [
+          0.584,
+          0.665
+        ],
+        [
+          0.432,
+          0.665
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.1,
+      "material_effect": "glass-vinyl",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic hero photograph of a blank chilled clear pint glass filled with amber lager on a polished walnut bar in an upscale bar-and-grill, warm brass lighting, front glass surface clean and unobstructed, no logo, letters, text, symbols, embossing, watermark, or decoration."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
       "id": "pouch",
       "name": "Product Pouch",
       "role": "packaging",
@@ -277,6 +365,182 @@
       "texture_strength": 0.16,
       "width": 1254,
       "height": 1254
+    },
+    {
+      "id": "restaurant-apron-patch",
+      "name": "Restaurant Apron Patch",
+      "role": "wearable",
+      "priority": 13,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "food",
+        "staff",
+        "uniform",
+        "apron"
+      ],
+      "quad": [
+        [
+          0.45,
+          0.376
+        ],
+        [
+          0.558,
+          0.374
+        ],
+        [
+          0.558,
+          0.412
+        ],
+        [
+          0.45,
+          0.414
+        ]
+      ],
+      "padding": 0.16,
+      "texture_strength": 0.2,
+      "material_effect": "fabric-ink",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic torso-only restaurant staff uniform with tailored black canvas apron over an off-white shirt at an upscale kitchen pass, one blank warm-ivory woven chest patch, warm professional lighting, no logo, letters, text, symbols, name tag, watermark, or other branding."
+      },
+      "width": 1484,
+      "height": 1060
+    },
+    {
+      "id": "restaurant-interior-sign",
+      "name": "Restaurant Interior Feature Sign",
+      "role": "environmental",
+      "priority": 13,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "food",
+        "beverage",
+        "premium",
+        "interior"
+      ],
+      "quad": [
+        [
+          0.243,
+          0.079
+        ],
+        [
+          0.754,
+          0.079
+        ],
+        [
+          0.754,
+          0.444
+        ],
+        [
+          0.243,
+          0.444
+        ]
+      ],
+      "padding": 0.12,
+      "texture_strength": 0.06,
+      "material_effect": "raised-sign",
+      "material_depth": 8,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic upscale bar-and-grill dining room with dark forest-green plaster, walnut booths, aged brass sconces and warm evening light, one large blank warm-ivory brass-framed sign panel centered on the feature wall, no logo, letters, text, symbols, artwork, watermark, or existing signage."
+      },
+      "width": 1860,
+      "height": 846
+    },
+    {
+      "id": "restaurant-menu",
+      "name": "Hardbound Restaurant Menu",
+      "role": "customer-touchpoint",
+      "priority": 14,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "food",
+        "beverage",
+        "premium",
+        "menu"
+      ],
+      "quad": [
+        [
+          0.328,
+          0.086
+        ],
+        [
+          0.758,
+          0.153
+        ],
+        [
+          0.668,
+          0.906
+        ],
+        [
+          0.174,
+          0.753
+        ]
+      ],
+      "padding": 0.18,
+      "texture_strength": 0.18,
+      "material_effect": "fabric-ink",
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic premium warm-ivory hardbound restaurant menu on a dark walnut dining table with cream linen, dark cutlery and an amber drink, three-quarter top-down editorial framing, menu cover fully blank and unobstructed, no logo, letters, text, symbols, watermark, or decorative mark."
+      },
+      "width": 1536,
+      "height": 1024
+    },
+    {
+      "id": "restaurant-storefront",
+      "name": "Premium Restaurant Storefront",
+      "role": "environmental",
+      "priority": 14,
+      "tags": [
+        "restaurant",
+        "bar",
+        "grill",
+        "hospitality",
+        "food",
+        "beverage",
+        "premium",
+        "storefront"
+      ],
+      "quad": [
+        [
+          0.154,
+          0.12
+        ],
+        [
+          0.814,
+          0.12
+        ],
+        [
+          0.814,
+          0.252
+        ],
+        [
+          0.154,
+          0.252
+        ]
+      ],
+      "padding": 0.08,
+      "texture_strength": 0.06,
+      "source": {
+        "kind": "ai-generated-blank",
+        "generator": "built-in image generation",
+        "prompt": "Photorealistic street-front exterior of an upscale bar and grill at blue hour, elegant black-painted timber gastropub facade with warm interior glow, aged brass hardware and oxblood awning, one wide warm-ivory blank fascia centered above the entrance, straight-on wide architectural framing, no logo, letters, text, symbols, menu writing, watermark, or existing signage."
+      },
+      "width": 1536,
+      "height": 1024
     },
     {
       "id": "shipping-box",

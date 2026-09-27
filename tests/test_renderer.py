@@ -21,7 +21,7 @@ SPEC.loader.exec_module(renderer)
 class RendererTests(unittest.TestCase):
     def test_catalog_and_diverse_selection(self):
         items = renderer.templates()
-        self.assertEqual(len(items), 18)
+        self.assertEqual(len(items), 24)
         selected = renderer.select(items, "sustainable trail running outdoor fashion equipment", "", 6, "")
         self.assertEqual(len(selected), 6)
         self.assertGreaterEqual(len({item["role"] for item in selected}), 4)

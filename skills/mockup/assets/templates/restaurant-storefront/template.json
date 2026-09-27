@@ -1,0 +1,43 @@
+{
+  "id": "restaurant-storefront",
+  "name": "Premium Restaurant Storefront",
+  "role": "environmental",
+  "priority": 14,
+  "tags": [
+    "restaurant",
+    "bar",
+    "grill",
+    "hospitality",
+    "food",
+    "beverage",
+    "premium",
+    "storefront"
+  ],
+  "quad": [
+    [
+      0.154,
+      0.12
+    ],
+    [
+      0.814,
+      0.12
+    ],
+    [
+      0.814,
+      0.252
+    ],
+    [
+      0.154,
+      0.252
+    ]
+  ],
+  "padding": 0.08,
+  "texture_strength": 0.06,
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Photorealistic street-front exterior of an upscale bar and grill at blue hour, elegant black-painted timber gastropub facade with warm interior glow, aged brass hardware and oxblood awning, one wide warm-ivory blank fascia centered above the entrance, straight-on wide architectural framing, no logo, letters, text, symbols, menu writing, watermark, or existing signage."
+  },
+  "width": 1536,
+  "height": 1024
+}

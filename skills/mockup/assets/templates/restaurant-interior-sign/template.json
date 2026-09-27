@@ -1,0 +1,45 @@
+{
+  "id": "restaurant-interior-sign",
+  "name": "Restaurant Interior Feature Sign",
+  "role": "environmental",
+  "priority": 13,
+  "tags": [
+    "restaurant",
+    "bar",
+    "grill",
+    "hospitality",
+    "food",
+    "beverage",
+    "premium",
+    "interior"
+  ],
+  "quad": [
+    [
+      0.243,
+      0.079
+    ],
+    [
+      0.754,
+      0.079
+    ],
+    [
+      0.754,
+      0.444
+    ],
+    [
+      0.243,
+      0.444
+    ]
+  ],
+  "padding": 0.12,
+  "texture_strength": 0.06,
+  "material_effect": "raised-sign",
+  "material_depth": 8,
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Photorealistic upscale bar-and-grill dining room with dark forest-green plaster, walnut booths, aged brass sconces and warm evening light, one large blank warm-ivory brass-framed sign panel centered on the feature wall, no logo, letters, text, symbols, artwork, watermark, or existing signage."
+  },
+  "width": 1860,
+  "height": 846
+}

@@ -1,0 +1,44 @@
+{
+  "id": "restaurant-apron-patch",
+  "name": "Restaurant Apron Patch",
+  "role": "wearable",
+  "priority": 13,
+  "tags": [
+    "restaurant",
+    "bar",
+    "grill",
+    "hospitality",
+    "food",
+    "staff",
+    "uniform",
+    "apron"
+  ],
+  "quad": [
+    [
+      0.45,
+      0.376
+    ],
+    [
+      0.558,
+      0.374
+    ],
+    [
+      0.558,
+      0.412
+    ],
+    [
+      0.45,
+      0.414
+    ]
+  ],
+  "padding": 0.16,
+  "texture_strength": 0.2,
+  "material_effect": "fabric-ink",
+  "source": {
+    "kind": "ai-generated-blank",
+    "generator": "built-in image generation",
+    "prompt": "Photorealistic torso-only restaurant staff uniform with tailored black canvas apron over an off-white shirt at an upscale kitchen pass, one blank warm-ivory woven chest patch, warm professional lighting, no logo, letters, text, symbols, name tag, watermark, or other branding."
+  },
+  "width": 1484,
+  "height": 1060
+}
