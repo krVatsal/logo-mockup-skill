@@ -8,6 +8,7 @@ import unittest
 from pathlib import Path
 
 from PIL import Image
+import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 SCRIPT = ROOT / "skills" / "mockup" / "scripts" / "render_mockups.py"
@@ -35,6 +36,22 @@ class RendererTests(unittest.TestCase):
             Image.new("RGB", (700, 700), "white").save(path)
             with self.assertRaisesRegex(ValueError, "opaque"):
                 renderer.load_logo(path)
+
+    def test_contrasting_surface_meets_accessible_ratio(self):
+        for color in (np.array([237, 230, 214]), np.array([22, 24, 28]), np.array([210, 40, 80])):
+            surface = renderer.contrasting_surface(color)
+            self.assertGreaterEqual(renderer.contrast_ratio(color, surface), 3.0)
+
+    def test_billboard_uses_padded_brand_artboard(self):
+        billboard = next(item for item in renderer.templates() if item["id"] == "billboard")
+        self.assertTrue(billboard["artboard"])
+        self.assertGreaterEqual(billboard["padding"], 0.2)
+
+    def test_apparel_uses_dense_displacement(self):
+        tshirt = next(item for item in renderer.templates() if item["id"] == "tshirt")
+        self.assertGreater(tshirt["displacement_strength"], 0)
+        self.assertLessEqual(tshirt["displacement_strength"], 6)
+        self.assertTrue(tshirt["adaptive_surface"])
 
     def test_checked_in_examples_are_complete(self):
         for name in ("northstar-trail", "verdant-pantry", "after-hours-coffee"):

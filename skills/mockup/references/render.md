@@ -16,6 +16,9 @@ The renderer:
 - trims transparent padding while preserving aspect ratio;
 - fits the logo inside each template's safe area;
 - uses a perspective transform, mask, and extracted surface lighting;
+- measures logo-to-surface contrast and, when a template opts in, recolors the photographed product with a feathered subject mask while preserving its material texture;
+- applies dense fold displacement on apparel before transferring highlights and weave texture;
+- builds a padded, brand-color-derived artboard for environmental media instead of leaving signs as blank white panels;
 - exports numbered PNGs without changing the source logo file;
 - writes the analysis, manifest, and contact sheet.
 

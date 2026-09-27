@@ -28,8 +28,9 @@
       0.57
     ]
   ],
-  "padding": 0.12,
-  "texture_strength": 0.2,
+  "padding": 0.18,
+  "texture_strength": 0.32,
+  "displacement_strength": 3.5,
   "width": 1254,
   "height": 1254
 }

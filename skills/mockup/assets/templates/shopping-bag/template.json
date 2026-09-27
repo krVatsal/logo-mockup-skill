@@ -29,8 +29,41 @@
       0.71
     ]
   ],
-  "padding": 0.14,
-  "texture_strength": 0.12,
+  "padding": 0.2,
+  "texture_strength": 0.18,
+  "adaptive_surface": true,
+  "minimum_contrast": 3.2,
+  "surface_rect": [
+    0.24,
+    0.16,
+    0.54,
+    0.7
+  ],
+  "surface_core": [
+    0.38,
+    0.34,
+    0.24,
+    0.3
+  ],
+  "surface_clip_polygon": [
+    [
+      0.2,
+      0.28
+    ],
+    [
+      0.74,
+      0.28
+    ],
+    [
+      0.74,
+      0.9
+    ],
+    [
+      0.19,
+      0.86
+    ]
+  ],
+  "surface_use_clip": true,
   "width": 1254,
   "height": 1254
 }

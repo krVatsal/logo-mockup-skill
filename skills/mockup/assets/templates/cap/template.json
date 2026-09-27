@@ -27,8 +27,24 @@
       0.52
     ]
   ],
-  "padding": 0.12,
-  "texture_strength": 0.18,
+  "padding": 0.18,
+  "texture_strength": 0.24,
+  "displacement_strength": 1.5,
+  "adaptive_surface": true,
+  "minimum_contrast": 3.2,
+  "surface_rect": [
+    0.2,
+    0.08,
+    0.68,
+    0.63
+  ],
+  "surface_core": [
+    0.39,
+    0.24,
+    0.22,
+    0.26
+  ],
+  "surface_fill_hull": true,
   "width": 1254,
   "height": 1254
 }

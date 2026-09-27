@@ -17,23 +17,24 @@
       ],
       "quad": [
         [
-          0.33,
-          0.15
+          0.321,
+          0.145
         ],
         [
-          0.88,
-          0.07
+          0.889,
+          0.064
         ],
         [
-          0.89,
-          0.52
+          0.899,
+          0.579
         ],
         [
-          0.32,
-          0.59
+          0.311,
+          0.667
         ]
       ],
-      "padding": 0.07,
+      "padding": 0.24,
+      "artboard": true,
       "texture_strength": 0.05,
       "width": 1536,
       "height": 1024
@@ -104,8 +105,24 @@
           0.52
         ]
       ],
-      "padding": 0.12,
-      "texture_strength": 0.18,
+      "padding": 0.18,
+      "texture_strength": 0.24,
+      "displacement_strength": 1.5,
+      "adaptive_surface": true,
+      "minimum_contrast": 3.2,
+      "surface_rect": [
+        0.2,
+        0.08,
+        0.68,
+        0.63
+      ],
+      "surface_core": [
+        0.39,
+        0.24,
+        0.22,
+        0.26
+      ],
+      "surface_fill_hull": true,
       "width": 1254,
       "height": 1254
     },
@@ -174,8 +191,9 @@
           0.57
         ]
       ],
-      "padding": 0.12,
-      "texture_strength": 0.2,
+      "padding": 0.18,
+      "texture_strength": 0.32,
+      "displacement_strength": 3.5,
       "width": 1254,
       "height": 1254
     },
@@ -282,8 +300,41 @@
           0.71
         ]
       ],
-      "padding": 0.14,
-      "texture_strength": 0.12,
+      "padding": 0.2,
+      "texture_strength": 0.18,
+      "adaptive_surface": true,
+      "minimum_contrast": 3.2,
+      "surface_rect": [
+        0.24,
+        0.16,
+        0.54,
+        0.7
+      ],
+      "surface_core": [
+        0.38,
+        0.34,
+        0.24,
+        0.3
+      ],
+      "surface_clip_polygon": [
+        [
+          0.2,
+          0.28
+        ],
+        [
+          0.74,
+          0.28
+        ],
+        [
+          0.74,
+          0.9
+        ],
+        [
+          0.19,
+          0.86
+        ]
+      ],
+      "surface_use_clip": true,
       "width": 1254,
       "height": 1254
     },
@@ -391,8 +442,41 @@
           0.73
         ]
       ],
-      "padding": 0.12,
-      "texture_strength": 0.25,
+      "padding": 0.18,
+      "texture_strength": 0.34,
+      "displacement_strength": 2.5,
+      "adaptive_surface": true,
+      "minimum_contrast": 3.2,
+      "surface_rect": [
+        0.18,
+        0.12,
+        0.64,
+        0.8
+      ],
+      "surface_core": [
+        0.34,
+        0.38,
+        0.32,
+        0.38
+      ],
+      "surface_clip_polygon": [
+        [
+          0.18,
+          0.31
+        ],
+        [
+          0.82,
+          0.31
+        ],
+        [
+          0.82,
+          0.92
+        ],
+        [
+          0.18,
+          0.92
+        ]
+      ],
       "width": 1254,
       "height": 1254
     },
@@ -427,8 +511,23 @@
           0.58
         ]
       ],
-      "padding": 0.12,
-      "texture_strength": 0.22,
+      "padding": 0.18,
+      "texture_strength": 0.38,
+      "displacement_strength": 4.5,
+      "adaptive_surface": true,
+      "minimum_contrast": 3.2,
+      "surface_rect": [
+        0.08,
+        0.07,
+        0.84,
+        0.86
+      ],
+      "surface_core": [
+        0.36,
+        0.22,
+        0.28,
+        0.56
+      ],
       "width": 1254,
       "height": 1254
     }
