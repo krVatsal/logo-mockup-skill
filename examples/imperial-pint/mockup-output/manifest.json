@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "brand": "Imperial Pint",
+  "brief": "Premium bar and grill restaurant",
+  "logo": "../logo.png",
+  "outputs": [
+    {
+      "name": "Blue-hour Storefront",
+      "path": "images/01-storefront.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    },
+    {
+      "name": "Interior Feature Sign",
+      "path": "images/02-interior-sign.png",
+      "dimensions": [
+        3001,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    },
+    {
+      "name": "Hardbound Menu",
+      "path": "images/03-menu-cover.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    },
+    {
+      "name": "Branded Pint Glass",
+      "path": "images/04-pint-glass.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    },
+    {
+      "name": "Leather Drinks Coaster",
+      "path": "images/05-leather-coaster.png",
+      "dimensions": [
+        2048,
+        1365
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    },
+    {
+      "name": "Staff Apron Patch",
+      "path": "images/06-staff-apron.png",
+      "dimensions": [
+        2048,
+        1463
+      ],
+      "mode": "generative blank scene + deterministic composite"
+    }
+  ],
+  "generative_prompts": [
+    "Blank warm-ivory fascia on an upscale black gastropub storefront at blue hour.",
+    "Blank brass-framed ivory sign on a dark green premium restaurant interior wall.",
+    "Blank warm-ivory hardbound menu on a walnut restaurant table.",
+    "Blank chilled pint glass of amber lager on a polished walnut bar.",
+    "Blank warm-ivory square leather coaster beneath a tumbler on a walnut bar.",
+    "Blank ivory woven patch on a black restaurant apron in a professional kitchen."
+  ],
+  "identity_invariant": "The supplied wordmark and fork emblem geometry were extracted and composited deterministically after blank scene generation; the image model did not redraw the logo."
+}

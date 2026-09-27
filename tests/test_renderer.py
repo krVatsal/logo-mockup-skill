@@ -65,7 +65,7 @@ class RendererTests(unittest.TestCase):
         self.assertEqual(cap["logo_backing"], "woven-patch")
 
     def test_checked_in_examples_are_complete(self):
-        for name in ("ai-application", "razor-eater", "fabs-clothing"):
+        for name in ("ai-application", "razor-eater", "fabs-clothing", "imperial-pint"):
             output = ROOT / "examples" / name / "mockup-output"
             manifest = json.loads((output / "manifest.json").read_text(encoding="utf-8"))
             self.assertEqual(len(manifest["outputs"]), 6)

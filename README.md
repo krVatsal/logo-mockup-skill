@@ -20,11 +20,12 @@ Transparent PNG and SVG logos are supported. SVG rendering uses a self-contained
 
 ## Examples
 
-Three complete, production-oriented examples are included:
+Four complete, production-oriented examples are included:
 
 - AI Application - dimensional technology identity across fabric, offices, facades, reception, and glass
 - Razor Eater - Indo-Chinese fast-moving food packaging, storefront, campaign, and staff apparel
 - Fabs - European clothing and merchandise across apparel, accessories, retail bags, and campaign media
+- Imperial Pint - premium bar-and-grill identity across storefront, dining room, menu, glassware, coaster, and staff uniform
 
 Each example contains the supplied source mark, company brief, six mockups, contact sheet, analysis, and manifest.
 
