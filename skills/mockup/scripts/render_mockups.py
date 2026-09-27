@@ -205,7 +205,13 @@ def select(items: list[dict], brief: str, surfaces: str, count: int, style: str)
     return chosen
 
 
-def logo_canvas(logo: Image.Image, quad: np.ndarray, padding: float, artboard: bool = False) -> Image.Image:
+def logo_canvas(
+    logo: Image.Image,
+    quad: np.ndarray,
+    padding: float,
+    artboard: bool = False,
+    backing: str = "",
+) -> Image.Image:
     top = np.linalg.norm(quad[1] - quad[0])
     bottom = np.linalg.norm(quad[2] - quad[3])
     left = np.linalg.norm(quad[3] - quad[0])
@@ -215,6 +221,28 @@ def logo_canvas(logo: Image.Image, quad: np.ndarray, padding: float, artboard: b
     inset = max(4, round(min(width, height) * padding))
     primary = logo_color(logo)
     canvas = brand_field((width, height), primary) if artboard else Image.new("RGBA", (width, height))
+    if backing == "woven-patch":
+        normalized = np.clip(primary / 255.0, 0, 1)
+        hue, saturation, _ = colorsys.rgb_to_hsv(*normalized)
+        hue = hue if saturation > 0.12 else 0.065
+        patch_rgb = tuple(round(channel * 255) for channel in colorsys.hsv_to_rgb((hue + 0.56) % 1, 0.48, 0.36))
+        draw = ImageDraw.Draw(canvas)
+        margin_x = max(2, round(width * 0.035))
+        margin_y = max(2, round(height * 0.055))
+        radius = max(5, round(height * 0.18))
+        box = (margin_x, margin_y, width - margin_x - 1, height - margin_y - 1)
+        draw.rounded_rectangle(box, radius=radius, fill=patch_rgb + (246,))
+        stitch_inset = max(3, round(min(width, height) * 0.035))
+        stitch_box = (
+            box[0] + stitch_inset, box[1] + stitch_inset,
+            box[2] - stitch_inset, box[3] - stitch_inset,
+        )
+        draw.rounded_rectangle(
+            stitch_box,
+            radius=max(3, radius - stitch_inset),
+            outline=tuple(int(x) for x in np.clip(primary, 0, 255)) + (118,),
+            width=max(1, round(min(width, height) * 0.012)),
+        )
     fitted = ImageOps.contain(logo, (width - 2 * inset, height - 2 * inset), Image.Resampling.LANCZOS)
     canvas.alpha_composite(fitted, ((width - fitted.width) // 2, (height - fitted.height) // 2))
     return canvas
@@ -264,7 +292,13 @@ def render(item: dict, logo: Image.Image, destination: Path) -> tuple[int, int]:
     base = Image.open(folder / "base.png").convert("RGBA")
     width, height = base.size
     quad = np.float32([[x * width, y * height] for x, y in item["quad"]])
-    artwork = logo_canvas(logo, quad, item.get("padding", 0.1), item.get("artboard", False))
+    artwork = logo_canvas(
+        logo,
+        quad,
+        item.get("padding", 0.1),
+        item.get("artboard", False),
+        item.get("logo_backing", ""),
+    )
     src = np.float32([[0, 0], [artwork.width - 1, 0], [artwork.width - 1, artwork.height - 1], [0, artwork.height - 1]])
     transform = cv2.getPerspectiveTransform(src, quad)
     warped = cv2.warpPerspective(

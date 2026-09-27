@@ -30,7 +30,8 @@
   "padding": 0.18,
   "texture_strength": 0.24,
   "displacement_strength": 1.5,
-  "adaptive_surface": true,
+  "adaptive_surface": false,
+  "logo_backing": "woven-patch",
   "minimum_contrast": 3.2,
   "surface_rect": [
     0.2,

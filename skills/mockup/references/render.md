@@ -20,6 +20,7 @@ The renderer:
 - applies dense fold displacement on apparel before transferring highlights and weave texture;
 - builds a padded, brand-color-derived artboard for environmental media instead of leaving signs as blank white panels;
 - can print a coordinated editorial illustration system into selected merchandise surfaces; these treatments use layered color fields, large shapes, linework, and grain rather than swapping a light blank for a flat dark fill;
+- can place artwork on a curved woven patch when recoloring an entire product would create implausible material or panel boundaries;
 - exports numbered PNGs without changing the source logo file;
 - writes the analysis, manifest, and contact sheet.
 
