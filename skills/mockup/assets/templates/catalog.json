@@ -302,7 +302,8 @@
       ],
       "padding": 0.2,
       "texture_strength": 0.18,
-      "adaptive_surface": true,
+      "adaptive_surface": false,
+      "surface_design": true,
       "minimum_contrast": 3.2,
       "surface_rect": [
         0.24,
@@ -445,7 +446,8 @@
       "padding": 0.18,
       "texture_strength": 0.34,
       "displacement_strength": 2.5,
-      "adaptive_surface": true,
+      "adaptive_surface": false,
+      "surface_design": true,
       "minimum_contrast": 3.2,
       "surface_rect": [
         0.18,

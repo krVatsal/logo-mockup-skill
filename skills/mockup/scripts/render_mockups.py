@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import colorsys
 import hashlib
 import json
 import math
@@ -48,7 +49,7 @@ def contrasting_surface(primary: np.ndarray) -> np.ndarray:
 
 
 def brand_field(size: tuple[int, int], primary: np.ndarray) -> Image.Image:
-    """Create a quiet editorial background derived from the supplied logo color."""
+    """Create a restrained editorial illustration derived from the logo palette."""
     width, height = size
     target = contrasting_surface(primary)
     yy, xx = np.mgrid[0:height, 0:width].astype(np.float32)
@@ -57,10 +58,69 @@ def brand_field(size: tuple[int, int], primary: np.ndarray) -> Image.Image:
     direction = 1 if relative_luminance(target) < 0.25 else -1
     rgb = target[None, None, :] + direction * (diagonal * 12 + glow * 8)
     rng = np.random.default_rng(230519)
-    grain = rng.normal(0, 1.25, (height, width, 1))
+    grain = rng.normal(0, 1.35, (height, width, 1))
     rgb = np.clip(rgb + grain, 0, 255).astype(np.uint8)
     alpha = np.full((height, width, 1), 255, dtype=np.uint8)
-    return Image.fromarray(np.concatenate([rgb, alpha], axis=2), "RGBA")
+    field = Image.fromarray(np.concatenate([rgb, alpha], axis=2), "RGBA")
+
+    normalized = np.clip(primary / 255.0, 0, 1)
+    hue, saturation, _ = colorsys.rgb_to_hsv(*normalized)
+    hue = hue if saturation > 0.12 else 0.065
+    rust = tuple(round(channel * 255) for channel in colorsys.hsv_to_rgb(hue, 0.68, 0.72))
+    blue = tuple(round(channel * 255) for channel in colorsys.hsv_to_rgb((hue + 0.56) % 1, 0.52, 0.48))
+    ink = tuple(int(x) for x in np.clip(contrasting_surface(primary), 0, 255))
+    line = tuple(int(x) for x in np.clip(primary, 0, 255))
+
+    overlay = Image.new("RGBA", size)
+    draw = ImageDraw.Draw(overlay)
+    draw.ellipse(
+        (-round(width * 0.24), round(height * 0.42), round(width * 0.35), round(height * 1.18)),
+        fill=rust + (188,),
+    )
+    draw.polygon(
+        [
+            (round(width * 0.72), -round(height * 0.08)),
+            (round(width * 1.08), round(height * 0.16)),
+            (round(width * 0.88), round(height * 1.05)),
+            (round(width * 0.62), round(height * 0.92)),
+        ],
+        fill=blue + (136,),
+    )
+    draw.ellipse(
+        (round(width * 0.67), round(height * 0.08), round(width * 0.82), round(height * 0.28)),
+        fill=rust + (214,),
+    )
+    line_width = max(2, round(min(width, height) * 0.006))
+    for offset in (0.00, 0.055, 0.11):
+        draw.arc(
+            (
+                round(width * (-0.09 + offset)), round(height * (0.16 + offset)),
+                round(width * (0.73 + offset)), round(height * (1.13 + offset)),
+            ),
+            start=202, end=332, fill=line + (112,), width=line_width,
+        )
+    for index in range(5):
+        x = round(width * (0.075 + index * 0.034))
+        draw.line(
+            [(x, round(height * 0.10)), (x, round(height * 0.30))],
+            fill=ink + (92,), width=max(1, line_width // 2),
+        )
+    return Image.alpha_composite(field, overlay)
+
+
+def apply_surface_design(base: np.ndarray, surface_mask: np.ndarray, primary: np.ndarray) -> np.ndarray:
+    """Print the brand illustration into a photographed surface and retain material relief."""
+    height, width = surface_mask.shape
+    design = np.asarray(brand_field((width, height), primary), dtype=np.float32)
+    rgb = base[:, :, :3].astype(np.float32)
+    gray = cv2.cvtColor(rgb.astype(np.uint8), cv2.COLOR_RGB2GRAY).astype(np.float32)
+    low = cv2.GaussianBlur(gray, (0, 0), 18)
+    material = np.clip(1 + ((gray - low) / 255.0) * 1.35, 0.72, 1.30)[:, :, None]
+    printed = np.clip(design[:, :, :3] * material, 0, 255)
+    mask = cv2.GaussianBlur(surface_mask.astype(np.float32) / 255.0, (0, 0), 1.4)[:, :, None]
+    result = base.copy()
+    result[:, :, :3] = np.clip(rgb * (1 - mask) + printed * mask, 0, 255).astype(np.uint8)
+    return result
 
 
 def parse_args() -> argparse.Namespace:
@@ -220,7 +280,10 @@ def render(item: dict, logo: Image.Image, destination: Path) -> tuple[int, int]:
     warped[:, :, :3] = np.clip(warped[:, :, :3].astype(np.float32) * factor[:, :, None], 0, 255)
     base_np = np.asarray(base).copy()
     surface_path = folder / "surface-mask.png"
-    if item.get("adaptive_surface") and surface_path.exists() and not item.get("artboard"):
+    if item.get("surface_design") and surface_path.exists():
+        surface_mask = np.asarray(Image.open(surface_path).convert("L"))
+        base_np = apply_surface_design(base_np, surface_mask, logo_color(logo))
+    elif item.get("adaptive_surface") and surface_path.exists() and not item.get("artboard"):
         surface_mask = np.asarray(Image.open(surface_path).convert("L"))
         logo_rgb = logo_color(logo)
         local = base_np[:, :, :3][np.asarray(Image.open(folder / "mask.png").convert("L")) > 128]

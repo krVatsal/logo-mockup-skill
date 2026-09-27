@@ -47,6 +47,12 @@ class RendererTests(unittest.TestCase):
         self.assertTrue(billboard["artboard"])
         self.assertGreaterEqual(billboard["padding"], 0.2)
 
+    def test_brand_field_is_an_illustration_not_a_flat_fill(self):
+        field = np.asarray(renderer.brand_field((800, 500), np.array([237, 230, 214])))[:, :, :3]
+        self.assertGreater(float(field.std(axis=(0, 1)).max()), 20)
+        tote = next(item for item in renderer.templates() if item["id"] == "tote")
+        self.assertTrue(tote["surface_design"])
+
     def test_apparel_uses_dense_displacement(self):
         tshirt = next(item for item in renderer.templates() if item["id"] == "tshirt")
         self.assertGreater(tshirt["displacement_strength"], 0)
