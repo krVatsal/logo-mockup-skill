@@ -351,7 +351,8 @@ def composite_material(base: np.ndarray, warped: np.ndarray, item: dict) -> Imag
 
 def render(item: dict, logo: Image.Image, destination: Path) -> tuple[int, int]:
     folder = item["_dir"]
-    base = Image.open(folder / "base.png").convert("RGBA")
+    base_path = folder / "base.png" if (folder / "base.png").exists() else folder / "base.jpg"
+    base = Image.open(base_path).convert("RGBA")
     width, height = base.size
     quad = np.float32([[x * width, y * height] for x, y in item["quad"]])
     artwork = logo_canvas(
